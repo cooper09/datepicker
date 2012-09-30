@@ -1,0 +1,2938 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://jqueryui.com/demos/datepicker/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>jQuery UI - Datepicker Demos &amp; Documentation</title>
+	
+	<meta name="keywords" content="jquery,user interface,ui,widgets,interaction,javascript">
+	<meta name="description" content="jQuery UI is the official jQuery user interface library. It provides interactions, widgets, effects, and theming for creating Rich Internet Applications.">
+	<meta name="author" content="The jQuery Project">
+	
+	<link rel="shortcut icon" href="http://jqueryui.com/images/favicon.ico">
+	<link rel="icon" href="http://jqueryui.com/images/favicon.ico" type="image/x-icon">
+			<link rel="stylesheet" href="./template_files/base.css" type="text/css" media="all">
+			<link rel="stylesheet" href="./template_files/jquery-ui.css" type="text/css" media="all">
+			<link rel="stylesheet" href="./template_files/ui.theme.css" type="text/css" media="all">
+			<script src="./template_files/jquery.min.js" type="text/javascript"></script>
+			<script src="./template_files/jquery-ui.min.js" type="text/javascript"></script>
+			<script src="./template_files/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
+			<script src="./template_files/jquery-ui-i18n.min.js" type="text/javascript"></script>
+			<script src="./template_files/demos.js" type="text/javascript"></script>
+			<script src="./template_files/saved_resource" type="text/javascript"></script>
+		<style type="text/css">
+	
+	#jq-books{width:200px;float:right;margin-right:0}
+	#jq-books li{line-height:1.25em;margin:1em 0 2.8em;clear:left}
+	#home-content-wrapper #jq-books a.jq-bookImg{float:left;margin-right:10px;width:55px;height:70px}
+	#jq-books h3{margin:0 0 .2em 0}
+	#home-content-wrapper #jq-books h3 a{font-size:1em;color:black;}
+	#home-content-wrapper #jq-books a.jq-buyNow{font-size:1em;color:white;display:block;background:url(http://static.jquery.com/files/rocker/images/btn_blueSheen.gif) 50% repeat-x;text-decoration:none;color:#fff;font-weight:bold;padding:.2em .8em;float:left;margin-top:.2em;}
+	
+	</style>
+<script type="text/javascript" async="" src="./template_files/ga.js"></script><link href="./template_files/parseTheme.css.php" type="text/css" rel="Stylesheet" class="ui-theme"><script>function notifyScript() {     var evt = document.createEvent("Event");     evt.initEvent("notify", false, false);     if (document.getElementById("addthis-extension-script") == null) {        var d=document.createElement("div"); d.setAttribute("style", "display:none"); d.setAttribute("id", "addthis-extension-script");         if (window._ate)             d.textContent=_ate.pub();         else if(window.addthis_config && addthis_config.pubid)    d.textContent= addthis_config.pubid;        else if(window.addthis_config && addthis_config.username)    d.textContent= addthis_config.username;        else if(window.addthis_pub)    d.textContent= addthis_pub;        else             d.textContent="";         document.body.appendChild(d);     }    document.documentElement.dispatchEvent(evt); }notifyScript()</script></head>
+
+<body id="demos">
+<!--[if IE 5]><div id="ie5" class="ie"><![endif]-->
+<!--[if IE 6]><div id="ie6" class="ie"><![endif]-->
+<!--[if IE 7]><div id="ie7" class="ie"><![endif]-->
+<div id="wrapper">
+	<div id="banner">
+		<h1 class="logo">
+			<a href="http://jqueryui.com/home" title="jQuery UI"><span>jQuery UI</span></a>
+		</h1>
+		<div id="dock">
+			<div class="left"></div>
+			<ul>
+				<li>
+					<a href="http://jquery.com/">jQuery</a>
+				</li>
+				<li style="padding-right: 12px;">
+					<a href="http://plugins.jquery.com/">Plugins</a>
+				</li>
+				<li class="selected" style="padding-right: 12px;">
+					<a href="http://jqueryui.com/home">UI</a>
+				</li>
+				<li style="padding-left: 12px;">
+					<div style="background: #555; width: 1px; height: 24px; position: absolute; left: 0px;"></div>
+					<a href="http://blog.jqueryui.com/">Blog</a>
+				</li>
+				<li>
+					<a href="http://jqueryui.com/about">About</a>
+				</li>
+				<li>
+					<a href="http://docs.jquery.com/Donate">Donate</a>
+				</li>
+			</ul>
+			<div class="right"></div>
+		</div>
+		<div id="navigation">
+			<div class="left"></div>
+			<ul>
+				<li>
+					<a href="http://jqueryui.com/download">Download</a>
+				</li>
+				<li class="selected">
+					<a href="http://jqueryui.com/demos">Demos &amp; Documentation</a>
+				</li>
+				<li>
+					<a href="http://jqueryui.com/themeroller">Themes</a>
+				</li>
+								<li>
+					<a href="http://jqueryui.com/development">Development</a>
+				</li>
+				<li class="last">
+					<a href="http://jqueryui.com/support">Support</a>
+				</li>
+			</ul>
+			<div class="right"></div>
+		</div>
+	</div>
+	<div id="content-wrapper">
+		<div id="content">
+		<div class="content-top"></div>		<div class="content">
+<script type="text/javascript">
+var section = "demos/datepicker";
+</script>
+
+<div class="content-body">
+	<table cellspacing="0" cellpadding="0" class="layout-grid">
+		<tbody><tr>
+			<td>
+				
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+<table class="layout-grid" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td class="left-nav">
+			<dl class="demos-nav">
+				<dt>Interactions</dt>
+					<dd><a href="http://jqueryui.com/demos/draggable">Draggable</a></dd>
+					<dd><a href="http://jqueryui.com/demos/droppable">Droppable</a></dd>
+					<dd><a href="http://jqueryui.com/demos/resizable">Resizable</a></dd>
+					<dd><a href="http://jqueryui.com/demos/selectable">Selectable</a></dd>
+					<dd><a href="http://jqueryui.com/demos/sortable">Sortable</a></dd>
+				<dt>Widgets</dt>
+					<dd><a href="http://jqueryui.com/demos/accordion">Accordion</a></dd>
+					<dd><a href="http://jqueryui.com/demos/autocomplete">Autocomplete</a></dd>
+					<dd><a href="http://jqueryui.com/demos/button">Button</a></dd>
+					<dd><a href="http://jqueryui.com/demos/datepicker">Datepicker</a></dd>
+					<dd><a href="http://jqueryui.com/demos/dialog">Dialog</a></dd>
+					<dd><a href="http://jqueryui.com/demos/progressbar">Progressbar</a></dd>
+					<dd><a href="http://jqueryui.com/demos/slider">Slider</a></dd>
+					<dd><a href="http://jqueryui.com/demos/tabs">Tabs</a></dd>
+				<dt>Effects</dt>
+					<dd><a href="http://jqueryui.com/demos/animate">Color Animation</a></dd>
+					<dd><a href="http://jqueryui.com/demos/toggleClass">Toggle Class</a></dd>
+					<dd><a href="http://jqueryui.com/demos/addClass">Add Class</a></dd>
+					<dd><a href="http://jqueryui.com/demos/removeClass">Remove Class</a></dd>
+					<dd><a href="http://jqueryui.com/demos/switchClass">Switch Class</a></dd>
+					<dd><a href="http://jqueryui.com/demos/effect">Effect</a></dd>
+					<dd><a href="http://jqueryui.com/demos/toggle">Toggle</a></dd>
+					<dd><a href="http://jqueryui.com/demos/hide">Hide</a></dd>
+					<dd><a href="http://jqueryui.com/demos/show">Show</a></dd>
+				<dt>Utilities</dt>
+					<dd><a href="http://jqueryui.com/demos/position">Position</a></dd>
+					<dd><a href="http://jqueryui.com/demos/widget">Widget</a></dd>
+				<dt>About jQuery UI</dt>
+					<dd><a href="http://jqueryui.com/docs/Getting_Started">Getting Started</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Upgrade_Guide">Upgrade Guide</a></dd>					
+					<dd><a href="http://jqueryui.com/docs/Changelog">Changelog</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Roadmap">Roadmap</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Subversion">Subversion Access</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Developer_Guide">UI Developer Guidelines</a></dd>
+				<dt>Theming</dt>
+					<dd><a href="http://jqueryui.com/docs/Theming">Theming jQuery UI</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Theming/API">jQuery UI CSS Framework</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Theming/Themeroller">ThemeRoller application</a></dd>
+					<dd><a href="http://jqueryui.com/docs/Theming/ThemeSwitcher">Theme Switcher Widget</a></dd>
+
+			</dl>
+		</td>
+		<td class="normal">
+
+			
+						<div id="demo-header">
+							<h2>Datepicker</h2>
+						</div>
+						<div style="position: absolute; right: 27px" id="switcher"><a href="http://jqueryui.com/demos/datepicker/#" class="jquery-ui-themeswitcher-trigger" style="font-family: &#39;Trebuchet MS&#39;, Verdana, sans-serif; font-size: 11px; color: rgb(102, 102, 102); background-image: url(http://jqueryui.com/themeroller/themeswitchertool/images/buttonbg.png); background-color: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; text-decoration: none; padding: 3px 3px 3px 8px; width: 139px; display: block; height: 14px; outline: 0px; background-position: 50% 50%; background-repeat: repeat no-repeat; "><span class="jquery-ui-themeswitcher-icon" style="float: right; width: 16px; height: 16px; background-image: url(http://jqueryui.com/themeroller/themeswitchertool/images/icon_color_arrow.gif); background-position: 50% 50%; background-repeat: no-repeat no-repeat; "></span><span class="jquery-ui-themeswitcher-title">Theme: UI lightness</span></a></div>
+						<div id="demo-config">
+							<div id="demo-frame-wrapper">
+								<p id="demo-link"><a href="http://jqueryui.com/demos/datepicker/default.html" target="_blank"><span class="ui-icon ui-icon-newwin"></span>New window</a></p>
+								<div id="demo-frame">
+									
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	</script>
+
+
+
+<div class="demo">
+
+<p>Date: <input type="text" id="datepicker" class="hasDatepicker"></p>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description" style="display: none; ">
+<p>The datepicker is tied to a standard form input field.  Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay.  Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input's value.</p>
+</div><!-- End demo-description -->
+
+
+
+
+								</div>									
+							</div>
+
+							<div id="demo-config-menu">
+								
+
+
+	
+	
+	
+
+
+
+<div class="demos-nav">
+	<h4>Examples</h4>
+	<ul>
+		<li class="demo-config-on"><a href="http://jqueryui.com/demos/datepicker/default.html" target="demo-frame">Default functionality</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/date-formats.html" target="demo-frame">Format date</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/min-max.html" target="demo-frame">Restrict date range</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/localization.html" target="demo-frame">Localize calendar</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/alt-field.html" target="demo-frame">Populate alternate field</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/inline.html" target="demo-frame">Display inline</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/buttonbar.html" target="demo-frame">Display button bar</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/dropdown-month-year.html" target="demo-frame">Display month &amp; year menus</a></li>		
+		<li><a href="http://jqueryui.com/demos/datepicker/other-months.html" target="demo-frame">Dates in other months</a></li>		
+		<li><a href="http://jqueryui.com/demos/datepicker/show-week.html" target="demo-frame">Show week of the year</a></li>		
+		<li><a href="http://jqueryui.com/demos/datepicker/multiple-calendars.html" target="demo-frame">Display multiple months</a></li>		
+		<li><a href="http://jqueryui.com/demos/datepicker/icon-trigger.html" target="demo-frame">Icon trigger</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/animation.html" target="demo-frame">Animations</a></li>
+		<li><a href="http://jqueryui.com/demos/datepicker/date-range.html" target="demo-frame">Date Range</a></li>
+	</ul>
+</div>
+
+
+
+
+							</div>
+						</div><div id="demo-notes">
+<p>The datepicker is tied to a standard form input field.  Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay.  Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input's value.</p>
+</div><div id="demo-source"><a href="http://jqueryui.com/demos/datepicker/#" class="source-open">View Source</a><div style="display: block; "><pre><code>&lt;script&gt;
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	&lt;/script&gt;
+
+
+
+&lt;div class="demo"&gt;
+
+&lt;p&gt;Date: &lt;input type="text" id="datepicker"&gt;&lt;/p&gt;
+
+&lt;/div&gt;&lt;!-- End demo --&gt;
+
+
+
+&lt;div class="demo-description" style="display: none; "&gt;
+&lt;p&gt;The datepicker is tied to a standard form input field.  Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay.  Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input's value.&lt;/p&gt;
+&lt;/div&gt;&lt;!-- End demo-description --&gt;</code></pre></div></div>
+					
+<ul class="UIAPIPlugin-toc">
+<li><a href="http://jqueryui.com/demos/datepicker/#overview">Overview</a></li>
+<li><a href="http://jqueryui.com/demos/datepicker/#options">Options</a></li>
+<li><a href="http://jqueryui.com/demos/datepicker/#events">Events</a></li>
+<li><a href="http://jqueryui.com/demos/datepicker/#methods">Methods</a></li>
+<li><a href="http://jqueryui.com/demos/datepicker/#theming">Theming</a></li>
+</ul>
+<div class="UIAPIPlugin ui-tabs ui-widget ui-widget-content ui-corner-all" id="widget-docs">
+  <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="http://jqueryui.com/demos/datepicker/#overview">Overview</a></li><li class="ui-state-default ui-corner-top"><a href="http://jqueryui.com/demos/datepicker/#options">Options</a></li><li class="ui-state-default ui-corner-top"><a href="http://jqueryui.com/demos/datepicker/#events">Events</a></li><li class="ui-state-default ui-corner-top"><a href="http://jqueryui.com/demos/datepicker/#methods">Methods</a></li><li class="ui-state-default ui-corner-top"><a href="http://jqueryui.com/demos/datepicker/#theming">Theming</a></li></ul>
+  <div id="overview" class="ui-tabs-panel ui-widget-content ui-corner-bottom clearfix">
+    <h2 class="top-header">Overview</h2>
+    <div id="overview-main">
+        <p>The jQuery UI Datepicker is a highly configurable plugin that adds datepicker functionality to your pages. You can customize the date format and language, restrict the selectable date ranges and add in buttons and other navigation options easily.</p>
+<p>By default, the datepicker calendar opens in a small overlay onFocus and closes automatically onBlur or when a date is selected. For an inline calendar, simply attach the datepicker to a div or span.
+</p><p>You can use keyboard shortcuts to drive the datepicker:
+</p>
+<ul>
+ <li>page up/down - previous/next month</li>
+ <li>ctrl+page up/down - previous/next year</li>
+ <li>ctrl+home - current month or open when closed</li>
+ <li>ctrl+left/right - previous/next day</li>
+ <li>ctrl+up/down - previous/next week</li>
+ <li>enter - accept the selected date</li>
+ <li>ctrl+end - close and erase the date</li>
+ <li>escape - close the datepicker without selection</li>
+</ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="http://docs.jquery.com/action/edit/UI/API/1.8/Datepicker?section=1" title="Edit section: Utility functions">edit</a>]</div><a name="Utility_functions"></a><h3 id="utility-functions">Utility functions</h3>
+<ul>
+ <li><a href="http://docs.jquery.com/UI/Datepicker/setDefaults" title="UI/Datepicker/setDefaults">$.datepicker.setDefaults( settings )</a> - Set settings for all datepicker instances.</li>
+ <li><a href="http://docs.jquery.com/UI/Datepicker/formatDate" title="UI/Datepicker/formatDate">$.datepicker.formatDate( format, date, settings )</a> - Format a date into a string value with a specified format.</li>
+ <li><a href="http://docs.jquery.com/UI/Datepicker/parseDate" title="UI/Datepicker/parseDate">$.datepicker.parseDate( format, value, settings ) </a> - Extract a date from a string value with a specified format.</li>
+ <li><a href="http://docs.jquery.com/UI/Datepicker/iso8601Week" title="UI/Datepicker/iso8601Week">$.datepicker.iso8601Week( date )</a> - Determine the week of the year for a given date: 1 to 53.</li>
+ <li><a href="http://docs.jquery.com/UI/Datepicker/noWeekends" title="UI/Datepicker/noWeekends">$.datepicker.noWeekends</a> - Set as beforeShowDay function to prevent selection of weekends.</li>
+</ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="http://docs.jquery.com/action/edit/UI/API/1.8/Datepicker?section=2" title="Edit section: Localization">edit</a>]</div><a name="Localization"></a><h3>Localization</h3>
+<p>Datepicker provides support for localizing its content to cater for different languages
+	and date formats. Each localization is contained within its own file with the 
+	language code appended to the name, e.g. <code>jquery.ui.datepicker-fr.js</code> for French.
+	The desired localization file should be included after the main datepicker code. They add their settings to the set
+	of available localizations and automatically apply them as defaults for all instances.</p>
+<p>The <code>$.datepicker.regional</code> attribute holds an array of localizations,
+	indexed by language code, with "" referring to the default (English). Each entry is
+	an object with the following attributes: <code>closeText</code>, <code>prevText</code>,
+	<code>nextText</code>, <code>currentText</code>, <code>monthNames</code>,
+	<code>monthNamesShort</code>, <code>dayNames</code>, <code>dayNamesShort</code>, 
+	<code>dayNamesMin</code>, <code>weekHeader</code>, <code>dateFormat</code>,
+	<code>firstDay</code>, <code>isRTL</code>, <code>showMonthAfterYear</code>,
+	and <code>yearSuffix</code>.</p>
+<p>You can restore the default localizations with:</p>
+<p><code>$.datepicker.setDefaults($.datepicker.regional[""]);</code>
+</p>
+<p>And can then override an individual datepicker for a specific locale:</p>
+<p><code>$(selector).datepicker($.datepicker.regional['fr']);</code>
+</p>
+The localization files are included when using the <a href="http://jqueryui.com/download/" class="external text" title="http://jqueryui.com/download/">jQuery UI download builder</a>.
+    </div>
+    <div id="overview-dependencies">
+        <h3>Dependencies</h3>
+        <ul>
+<li>UI Core</li>
+</ul>
+    </div>
+    <div id="overview-example">
+        <h3>Example</h3>
+        <div id="overview-example" class="example">
+<ul><li><a href="http://jqueryui.com/demos/datepicker/#demo"><span>Demo</span></a></li><li><a href="http://jqueryui.com/demos/datepicker/#source"><span>View Source</span></a></li></ul>
+<p></p><div id="demo" class="tabs-container" rel="220">
+A simple jQuery UI Datepicker.<br>
+<p></p>
+<pre>$("#datepicker").datepicker();
+</pre>
+<p></p></div><div id="source" class="tabs-container">
+<p></p>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/&gt;
+  &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"&gt;&lt;/script&gt;
+  &lt;script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"&gt;&lt;/script&gt;
+  
+  &lt;script&gt;
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body style="font-size:62.5%;"&gt;
+  
+&lt;div id="datepicker"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p></p></div>
+<p></p><p></p></div>
+    </div>
+  </div>
+  <div id="options" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide clearfix">
+    <h2 class="top-header">Options</h2>
+    <div class="toggle-docs-links"><a class="toggle-docs-detail" href="http://jqueryui.com/demos/datepicker/#">Show details</a> | <a class="toggle-docs-example" href="http://jqueryui.com/demos/datepicker/#">Hide examples</a></div><ul class="options-list">
+      
+<li class="option" id="option-disabled">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-disabled">disabled</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Disables (true) or enables (false) the datepicker. Can be set when initialising (first creating) the datepicker.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>disabled</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ disabled: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>disabled</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var disabled = $( ".selector" ).datepicker( "option", "disabled" );
+//setter
+$( ".selector" ).datepicker( "option", "disabled", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-altField">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-altField">altField</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Selector</span>, jQuery, <span>Element</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">""</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The jQuery selector for another field that is to be updated with the selected date from the datepicker. Use the <code><a href="http://docs.jquery.com/UI/Datepicker#option-altFormat" title="UI/Datepicker">altFormat</a></code> setting to change the format of the date within this field. Leave as blank for no alternate field.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>altField</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ altField: "#actualDate" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>altField</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var altField = $( ".selector" ).datepicker( "option", "altField" );
+//setter
+$( ".selector" ).datepicker( "option", "altField", "#actualDate" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-altFormat">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-altFormat">altFormat</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">""</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code> to be used for the <code><a href="http://docs.jquery.com/UI/Datepicker#option-altField" title="UI/Datepicker">altField</a></code> option. This allows one date format to be shown to the user for selection purposes, while a different format is actually sent behind the scenes. For a full list of the possible formats see the <a href="http://docs.jquery.com/UI/Datepicker/formatDate" title="UI/Datepicker/formatDate">formatDate</a> function</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>altFormat</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ altFormat: "yy-mm-dd" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>altFormat</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var altFormat = $( ".selector" ).datepicker( "option", "altFormat" );
+//setter
+$( ".selector" ).datepicker( "option", "altFormat", "yy-mm-dd" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-appendText">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-appendText">appendText</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">""</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display after each date field, e.g. to show the required format.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>appendText</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ appendText: "(yyyy-mm-dd)" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>appendText</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var appendText = $( ".selector" ).datepicker( "option", "appendText" );
+//setter
+$( ".selector" ).datepicker( "option", "appendText", "(yyyy-mm-dd)" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-autoSize">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-autoSize">autoSize</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set to true to automatically resize the input field to accommodate dates in the current <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code>.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>autoSize</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ autoSize: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>autoSize</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var autoSize = $( ".selector" ).datepicker( "option", "autoSize" );
+//setter
+$( ".selector" ).datepicker( "option", "autoSize", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-buttonImage">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-buttonImage">buttonImage</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">""</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The URL for the popup button image. If set, <code><a href="http://docs.jquery.com/UI/Datepicker#option-buttonText" title="UI/Datepicker">buttonText</a></code> becomes the <i>alt</i> value and is not directly displayed.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>buttonImage</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ buttonImage: "/images/datepicker.gif" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>buttonImage</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var buttonImage = $( ".selector" ).datepicker( "option", "buttonImage" );
+//setter
+$( ".selector" ).datepicker( "option", "buttonImage", "/images/datepicker.gif" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-buttonImageOnly">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-buttonImageOnly">buttonImageOnly</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set to true to place an image after the field to use as the trigger without it appearing on a button.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>buttonImageOnly</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ buttonImageOnly: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>buttonImageOnly</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var buttonImageOnly = $( ".selector" ).datepicker( "option", "buttonImageOnly" );
+//setter
+$( ".selector" ).datepicker( "option", "buttonImageOnly", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-buttonText">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-buttonText">buttonText</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"..."</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display on the trigger button. Use in conjunction with <code><a href="http://docs.jquery.com/UI/Datepicker#option-showOn" title="UI/Datepicker">showOn</a></code> equal to 'button' or 'both'.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>buttonText</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ buttonText: "Choose" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>buttonText</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var buttonText = $( ".selector" ).datepicker( "option", "buttonText" );
+//setter
+$( ".selector" ).datepicker( "option", "buttonText", "Choose" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-calculateWeek">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-calculateWeek">calculateWeek</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Function</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">$.datepicker.iso8601Week</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>A function to calculate the week of the year for a given date. The default implementation uses the ISO 8601 definition: weeks start on a Monday; the first week of the year contains the first Thursday of the year.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>calculateWeek</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ calculateWeek: myWeekCalc });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>calculateWeek</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var calculateWeek = $( ".selector" ).datepicker( "option", "calculateWeek" );
+//setter
+$( ".selector" ).datepicker( "option", "calculateWeek", myWeekCalc );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-changeMonth">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-changeMonth">changeMonth</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Allows you to change the month by selecting from a drop-down list. You can enable this feature by setting the attribute to true.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>changeMonth</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ changeMonth: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>changeMonth</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var changeMonth = $( ".selector" ).datepicker( "option", "changeMonth" );
+//setter
+$( ".selector" ).datepicker( "option", "changeMonth", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-changeYear">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-changeYear">changeYear</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Allows you to change the year by selecting from a drop-down list. You can enable this feature by setting the attribute to true. Use the <code><a href="http://docs.jquery.com/UI/Datepicker#option-yearRange" title="UI/Datepicker">yearRange</a></code> option to control which years are made available for selection.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>changeYear</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ changeYear: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>changeYear</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var changeYear = $( ".selector" ).datepicker( "option", "changeYear" );
+//setter
+$( ".selector" ).datepicker( "option", "changeYear", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-closeText">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-closeText">closeText</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"Done"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display for the close link. This attribute is one of the regionalisation attributes. Use the <code><a href="http://docs.jquery.com/UI/Datepicker#option-showButtonPanel" title="UI/Datepicker">showButtonPanel</a></code> to display this button.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>closeText</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ closeText: "X" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>closeText</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var closeText = $( ".selector" ).datepicker( "option", "closeText" );
+//setter
+$( ".selector" ).datepicker( "option", "closeText", "X" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-constrainInput">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-constrainInput">constrainInput</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">true</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>When true entry in the input field is constrained to those characters allowed by the current <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code>.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>constrainInput</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ constrainInput: false });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>constrainInput</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var constrainInput = $( ".selector" ).datepicker( "option", "constrainInput" );
+//setter
+$( ".selector" ).datepicker( "option", "constrainInput", false );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-currentText">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-currentText">currentText</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"Today"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display for the current day link. This attribute is one of the regionalisation attributes. Use the <code><a href="http://docs.jquery.com/UI/Datepicker#option-showButtonPanel" title="UI/Datepicker">showButtonPanel</a></code> to display this button.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>currentText</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ currentText: "Now" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>currentText</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var currentText = $( ".selector" ).datepicker( "option", "currentText" );
+//setter
+$( ".selector" ).datepicker( "option", "currentText", "Now" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-dateFormat">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-dateFormat">dateFormat</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"mm/dd/yy"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The format for parsed and displayed dates. This attribute is one of the regionalisation attributes. For a full list of the possible formats see the <code><a href="http://docs.jquery.com/UI/Datepicker/formatDate" title="UI/Datepicker/formatDate">formatDate</a></code> function.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>dateFormat</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ dateFormat: "yy-mm-dd" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>dateFormat</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var dateFormat = $( ".selector" ).datepicker( "option", "dateFormat" );
+//setter
+$( ".selector" ).datepicker( "option", "dateFormat", "yy-mm-dd" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-dayNames">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-dayNames">dayNames</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Array</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The list of long day names, starting from Sunday, for use as requested via the <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code> setting. They also appear as popup hints when hovering over the corresponding column headings. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>dayNames</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ dayNames: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"] });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>dayNames</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var dayNames = $( ".selector" ).datepicker( "option", "dayNames" );
+//setter
+$( ".selector" ).datepicker( "option", "dayNames", ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"] );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-dayNamesMin">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-dayNamesMin">dayNamesMin</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Array</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The list of minimised day names, starting from Sunday, for use as column headers within the datepicker. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>dayNamesMin</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ dayNamesMin: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"] });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>dayNamesMin</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var dayNamesMin = $( ".selector" ).datepicker( "option", "dayNamesMin" );
+//setter
+$( ".selector" ).datepicker( "option", "dayNamesMin", ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"] );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-dayNamesShort">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-dayNamesShort">dayNamesShort</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Array</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The list of abbreviated day names, starting from Sunday, for use as requested via the <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code> setting. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>dayNamesShort</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ dayNamesShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"] });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>dayNamesShort</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var dayNamesShort = $( ".selector" ).datepicker( "option", "dayNamesShort" );
+//setter
+$( ".selector" ).datepicker( "option", "dayNamesShort", ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"] );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-defaultDate">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-defaultDate">defaultDate</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type">Date, <span>Number</span>, <span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">null</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set the date to highlight on first opening if the field is blank. Specify either an actual date via a Date object or as a string in the current <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>defaultDate</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ defaultDate: +7 });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>defaultDate</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var defaultDate = $( ".selector" ).datepicker( "option", "defaultDate" );
+//setter
+$( ".selector" ).datepicker( "option", "defaultDate", +7 );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-duration">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-duration">duration</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span>, <span>Number</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"normal"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Control the speed at which the datepicker appears, it may be a time in milliseconds or a string representing one of the three predefined speeds ("slow", "normal", "fast").</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>duration</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ duration: "slow" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>duration</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var duration = $( ".selector" ).datepicker( "option", "duration" );
+//setter
+$( ".selector" ).datepicker( "option", "duration", "slow" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-firstDay">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-firstDay">firstDay</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Number</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">0</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set the first day of the week: Sunday is 0, Monday is 1, ... This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>firstDay</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ firstDay: 1 });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>firstDay</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var firstDay = $( ".selector" ).datepicker( "option", "firstDay" );
+//setter
+$( ".selector" ).datepicker( "option", "firstDay", 1 );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-gotoCurrent">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-gotoCurrent">gotoCurrent</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>When true the current day link moves to the currently selected date instead of today.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>gotoCurrent</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ gotoCurrent: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>gotoCurrent</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var gotoCurrent = $( ".selector" ).datepicker( "option", "gotoCurrent" );
+//setter
+$( ".selector" ).datepicker( "option", "gotoCurrent", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-hideIfNoPrevNext">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-hideIfNoPrevNext">hideIfNoPrevNext</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Normally the previous and next links are disabled when not applicable (see <code><a href="http://docs.jquery.com/UI/Datepicker#option-minDate" title="UI/Datepicker">minDate</a></code>/<code><a href="http://docs.jquery.com/UI/Datepicker#option-maxDate" title="UI/Datepicker">maxDate</a></code>). You can hide them altogether by setting this attribute to true.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>hideIfNoPrevNext</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ hideIfNoPrevNext: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>hideIfNoPrevNext</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var hideIfNoPrevNext = $( ".selector" ).datepicker( "option", "hideIfNoPrevNext" );
+//setter
+$( ".selector" ).datepicker( "option", "hideIfNoPrevNext", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-isRTL">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-isRTL">isRTL</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>True if the current language is drawn from right to left. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>isRTL</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ isRTL: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>isRTL</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var isRTL = $( ".selector" ).datepicker( "option", "isRTL" );
+//setter
+$( ".selector" ).datepicker( "option", "isRTL", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-maxDate">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-maxDate">maxDate</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type">Date, <span>Number</span>, <span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">null</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set a maximum selectable date via a Date object or as a string in the current <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +1w'), or null for no limit.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>maxDate</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ maxDate: "+1m +1w" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>maxDate</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var maxDate = $( ".selector" ).datepicker( "option", "maxDate" );
+//setter
+$( ".selector" ).datepicker( "option", "maxDate", "+1m +1w" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-minDate">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-minDate">minDate</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type">Date, <span>Number</span>, <span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">null</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set a minimum selectable date via a Date object or as a string in the current <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '-1y -1m'), or null for no limit.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>minDate</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ minDate: new Date(2007, 1 - 1, 1) });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>minDate</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var minDate = $( ".selector" ).datepicker( "option", "minDate" );
+//setter
+$( ".selector" ).datepicker( "option", "minDate", new Date(2007, 1 - 1, 1) );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-monthNames">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-monthNames">monthNames</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Array</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The list of full month names, for use as requested via the <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code> setting. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>monthNames</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ monthNames: ["Januar","Februar","Marts","April","Maj","Juni","Juli","August","September","Oktober","November","December"] });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>monthNames</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var monthNames = $( ".selector" ).datepicker( "option", "monthNames" );
+//setter
+$( ".selector" ).datepicker( "option", "monthNames", ["Januar","Februar","Marts","April","Maj","Juni","Juli","August","September","Oktober","November","December"] );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-monthNamesShort">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-monthNamesShort">monthNamesShort</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Array</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The list of abbreviated month names, as used in the month header on each datepicker and as requested via the <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code> setting. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>monthNamesShort</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ monthNamesShort: ["Jan","Feb","Mar","Apr","Maj","Jun","Jul","Aug","Sep","Okt","Nov","Dec"] });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>monthNamesShort</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var monthNamesShort = $( ".selector" ).datepicker( "option", "monthNamesShort" );
+//setter
+$( ".selector" ).datepicker( "option", "monthNamesShort", ["Jan","Feb","Mar","Apr","Maj","Jun","Jul","Aug","Sep","Okt","Nov","Dec"] );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-navigationAsDateFormat">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-navigationAsDateFormat">navigationAsDateFormat</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>When true the <code><a href="http://docs.jquery.com/UI/Datepicker/formatDate" title="UI/Datepicker/formatDate">formatDate</a></code> function is applied to the <code><a href="http://docs.jquery.com/UI/Datepicker#option-prevText" title="UI/Datepicker">prevText</a></code>, <code><a href="http://docs.jquery.com/UI/Datepicker#option-nextText" title="UI/Datepicker">nextText</a></code>, and <code><a href="http://docs.jquery.com/UI/Datepicker#option-currentText" title="UI/Datepicker">currentText</a></code> values before display, allowing them to display the target month names for example.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>navigationAsDateFormat</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ navigationAsDateFormat: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>navigationAsDateFormat</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var navigationAsDateFormat = $( ".selector" ).datepicker( "option", "navigationAsDateFormat" );
+//setter
+$( ".selector" ).datepicker( "option", "navigationAsDateFormat", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-nextText">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-nextText">nextText</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"Next"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display for the next month link. This attribute is one of the regionalisation attributes. With the standard ThemeRoller styling, this value is replaced by an icon.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>nextText</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ nextText: "Later" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>nextText</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var nextText = $( ".selector" ).datepicker( "option", "nextText" );
+//setter
+$( ".selector" ).datepicker( "option", "nextText", "Later" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-numberOfMonths">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-numberOfMonths">numberOfMonths</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Number</span>, <span>Array</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">1</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set how many months to show at once. The value can be a straight integer, or can be a two-element array to define the number of rows and columns to display.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>numberOfMonths</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ numberOfMonths: [2, 3] });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>numberOfMonths</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var numberOfMonths = $( ".selector" ).datepicker( "option", "numberOfMonths" );
+//setter
+$( ".selector" ).datepicker( "option", "numberOfMonths", [2, 3] );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-prevText">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-prevText">prevText</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"Prev"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display for the previous month link. This attribute is one of the regionalisation attributes. With the standard ThemeRoller styling, this value is replaced by an icon.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>prevText</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ prevText: "Earlier" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>prevText</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var prevText = $( ".selector" ).datepicker( "option", "prevText" );
+//setter
+$( ".selector" ).datepicker( "option", "prevText", "Earlier" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-selectOtherMonths">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-selectOtherMonths">selectOtherMonths</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>When true days in other months shown before or after the current month are selectable. This only applies if <code><a href="http://docs.jquery.com/UI/Datepicker#option-showOtherMonths" title="UI/Datepicker">showOtherMonths</a></code> is also true.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>selectOtherMonths</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ selectOtherMonths: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>selectOtherMonths</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var selectOtherMonths = $( ".selector" ).datepicker( "option", "selectOtherMonths" );
+//setter
+$( ".selector" ).datepicker( "option", "selectOtherMonths", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-shortYearCutoff">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-shortYearCutoff">shortYearCutoff</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span>, <span>Number</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"+10"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set the cutoff year for determining the century for a date (used in conjunction with <code><a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">dateFormat</a></code> 'y'). If a numeric value (0-99) is provided then this value is used directly. If a string value is provided then it is converted to a number and added to the current year. Once the cutoff year is calculated, any dates entered with a year value less than or equal to it are considered to be in the current century, while those greater than it are deemed to be in the previous century.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>shortYearCutoff</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ shortYearCutoff: 50 });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>shortYearCutoff</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var shortYearCutoff = $( ".selector" ).datepicker( "option", "shortYearCutoff" );
+//setter
+$( ".selector" ).datepicker( "option", "shortYearCutoff", 50 );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showAnim">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showAnim">showAnim</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"show"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set the name of the animation used to show/hide the datepicker. Use 'show' (the default), 'slideDown', 'fadeIn', any of the show/hide <a href="http://docs.jquery.com/UI/Effects" class="external text" title="http://docs.jquery.com/UI/Effects">jQuery UI effects</a>, or "" for no animation.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showAnim</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showAnim: "fold" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showAnim</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showAnim = $( ".selector" ).datepicker( "option", "showAnim" );
+//setter
+$( ".selector" ).datepicker( "option", "showAnim", "fold" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showButtonPanel">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showButtonPanel">showButtonPanel</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Whether to show the button panel.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showButtonPanel</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showButtonPanel: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showButtonPanel</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showButtonPanel = $( ".selector" ).datepicker( "option", "showButtonPanel" );
+//setter
+$( ".selector" ).datepicker( "option", "showButtonPanel", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showCurrentAtPos">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showCurrentAtPos">showCurrentAtPos</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Number</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">0</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Specify where in a <a href="http://docs.jquery.com/UI/Datepicker#option-numberOfMonths" title="UI/Datepicker">multi-month</a> display the current month shows, starting from 0 at the top/left.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showCurrentAtPos</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showCurrentAtPos: 3 });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showCurrentAtPos</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showCurrentAtPos = $( ".selector" ).datepicker( "option", "showCurrentAtPos" );
+//setter
+$( ".selector" ).datepicker( "option", "showCurrentAtPos", 3 );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showMonthAfterYear">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showMonthAfterYear">showMonthAfterYear</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Whether to show the month after the year in the header. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showMonthAfterYear</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showMonthAfterYear: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showMonthAfterYear</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showMonthAfterYear = $( ".selector" ).datepicker( "option", "showMonthAfterYear" );
+//setter
+$( ".selector" ).datepicker( "option", "showMonthAfterYear", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showOn">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showOn">showOn</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"focus"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Have the datepicker appear automatically when the field receives focus ("focus"), appear only when a button is clicked ("button"), or appear when either event taks place ("both").</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showOn</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showOn: "both" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showOn</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showOn = $( ".selector" ).datepicker( "option", "showOn" );
+//setter
+$( ".selector" ).datepicker( "option", "showOn", "both" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showOptions">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showOptions">showOptions</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Options</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">{}</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>If using one of the jQuery UI effects for <code><a href="http://docs.jquery.com/UI/Datepicker#option-showAnim" title="UI/Datepicker">showAnim</a></code>, you can provide additional settings for that animation via this option.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showOptions</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showOptions: {direction: 'up'}  });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showOptions</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showOptions = $( ".selector" ).datepicker( "option", "showOptions" );
+//setter
+$( ".selector" ).datepicker( "option", "showOptions", {direction: 'up'}  );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showOtherMonths">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showOtherMonths">showOtherMonths</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Display dates in other months (non-selectable) at the start or end of the current month. To make these days selectable use <code><a href="http://docs.jquery.com/UI/Datepicker#option-selectOtherMonths" title="UI/Datepicker">selectOtherMonths</a></code>.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showOtherMonths</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showOtherMonths: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showOtherMonths</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showOtherMonths = $( ".selector" ).datepicker( "option", "showOtherMonths" );
+//setter
+$( ".selector" ).datepicker( "option", "showOtherMonths", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-showWeek">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-showWeek">showWeek</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Boolean</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">false</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>When true a column is added to show the week of the year. The <code><a href="http://docs.jquery.com/UI/Datepicker#option-calculateWeek" title="UI/Datepicker">calculateWeek</a></code> option determines how the week of the year is calculated. You may also want to change the <code><a href="http://docs.jquery.com/UI/Datepicker#option-firstDay" title="UI/Datepicker">firstDay</a></code> option.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>showWeek</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ showWeek: true });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>showWeek</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var showWeek = $( ".selector" ).datepicker( "option", "showWeek" );
+//setter
+$( ".selector" ).datepicker( "option", "showWeek", true );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-stepMonths">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-stepMonths">stepMonths</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>Number</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">1</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Set how many months to move when clicking the Previous/Next links.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>stepMonths</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ stepMonths: 3 });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>stepMonths</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var stepMonths = $( ".selector" ).datepicker( "option", "stepMonths" );
+//setter
+$( ".selector" ).datepicker( "option", "stepMonths", 3 );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-weekHeader">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-weekHeader">weekHeader</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"Wk"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>The text to display for the week of the year column heading. This attribute is one of the regionalisation attributes. Use <code><a href="http://docs.jquery.com/UI/Datepicker#option-showWeek" title="UI/Datepicker">showWeek</a></code> to display this column.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>weekHeader</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ weekHeader: "W" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>weekHeader</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var weekHeader = $( ".selector" ).datepicker( "option", "weekHeader" );
+//setter
+$( ".selector" ).datepicker( "option", "weekHeader", "W" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-yearRange">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-yearRange">yearRange</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">"c-10:c+10"</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Control the range of years displayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn). Note that this option only affects what appears in the drop-down, to restrict which dates may be selected use the <code><a href="http://docs.jquery.com/UI/Datepicker#option-minDate" title="UI/Datepicker">minDate</a></code> and/or <code><a href="http://docs.jquery.com/UI/Datepicker#option-maxDate" title="UI/Datepicker">maxDate</a></code> options.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>yearRange</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ yearRange: "2000:2010" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>yearRange</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var yearRange = $( ".selector" ).datepicker( "option", "yearRange" );
+//setter
+$( ".selector" ).datepicker( "option", "yearRange", "2000:2010" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="option" id="option-yearSuffix">
+  <div class="option-header">
+    <h3 class="option-name"><a href="http://jqueryui.com/demos/datepicker/#option-yearSuffix">yearSuffix</a></h3>
+    <dl>
+      <dt class="option-type-label">Type:</dt>
+        <dd class="option-type"><span>String</span></dd>
+      
+      <dt class="option-default-label">Default:</dt>
+        <dd class="option-default">""</dd>
+      
+    </dl>
+  </div>
+  <div class="option-description" style="display: none; ">
+    <p>Additional text to display after the year in the month headers. This attribute is one of the regionalisation attributes.</p>
+  </div>
+  <div class="option-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="option-examples-list">
+    
+<dt>
+  Initialize a datepicker with the <code>yearSuffix</code> option specified.
+</dt>
+<dd>
+<pre><code>$( ".selector" ).datepicker({ yearSuffix: "CE" });</code></pre>
+</dd>
+
+    
+<dt>
+  Get or set the <code>yearSuffix</code> option, after init.
+</dt>
+<dd>
+<pre><code>//getter
+var yearSuffix = $( ".selector" ).datepicker( "option", "yearSuffix" );
+//setter
+<p></p>
+$( ".selector" ).datepicker( "option", "yearSuffix", "CE" );</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+    </ul>
+  </div>
+  <div id="events" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide clearfix">
+    <h2 class="top-header">Events</h2>
+    <div class="toggle-docs-links"><a class="toggle-docs-detail" href="http://jqueryui.com/demos/datepicker/#">Show details</a> | <a class="toggle-docs-example" href="http://jqueryui.com/demos/datepicker/#">Hide examples</a></div><ul class="events-list">
+      <p><b>Known issue: Datepicker does not trigger a create event.</b></p>
+<li class="event" id="event-beforeShow">
+  <div class="event-header">
+    <h3 class="event-name"><a href="http://jqueryui.com/demos/datepicker/#event-beforeShow">beforeShow</a></h3>
+    <dl>
+      <dt class="event-type-label"></dt>
+        <dd class="event-type">function(input, inst)</dd>
+    </dl>
+  </div>
+  <div class="event-description" style="display: none; ">
+    <p>Can be a function that takes an input field and current datepicker instance and returns an options object to update the datepicker with. It is called just before the datepicker is displayed.</p>
+  </div>
+  <div class="event-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="event-examples-list">
+    
+<dt>
+  Supply a callback function to handle the <code>beforeShow</code> event as an init option.
+</dt>
+<dd>
+<pre><code>$('.selector').datepicker({
+   beforeShow: function(input, inst) { ... }
+});</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+<p>
+</p><li class="event" id="event-beforeShowDay">
+  <div class="event-header">
+    <h3 class="event-name"><a href="http://jqueryui.com/demos/datepicker/#event-beforeShowDay">beforeShowDay</a></h3>
+    <dl>
+      <dt class="event-type-label"></dt>
+        <dd class="event-type">function(date)</dd>
+    </dl>
+  </div>
+  <div class="event-description" style="display: none; ">
+    <p>The function takes a date as a parameter and must return an array with [0] equal to true/false indicating whether or not this date is selectable, [1] equal to a CSS class name(s) or "" for the default presentation, and [2] an optional popup tooltip for this date. It is called for each day in the datepicker before it is displayed.</p>
+  </div>
+  <div class="event-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="event-examples-list">
+    
+<dt>
+  Supply a callback function to handle the <code>beforeShowDay</code> event as an init option.
+</dt>
+<dd>
+<pre><code>$('.selector').datepicker({
+   beforeShowDay: function(date) { ... }
+});</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="event" id="event-onChangeMonthYear">
+  <div class="event-header">
+    <h3 class="event-name"><a href="http://jqueryui.com/demos/datepicker/#event-onChangeMonthYear">onChangeMonthYear</a></h3>
+    <dl>
+      <dt class="event-type-label"></dt>
+        <dd class="event-type">function(year, month, inst)</dd>
+    </dl>
+  </div>
+  <div class="event-description" style="display: none; ">
+    <p>Allows you to define your own event when the datepicker moves to a new month and/or year. The function receives the selected year, month (1-12), and the datepicker instance as parameters. <code>this</code> refers to the associated input field.</p>
+  </div>
+  <div class="event-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="event-examples-list">
+    
+<dt>
+  Supply a callback function to handle the <code>onChangeMonthYear</code> event as an init option.
+</dt>
+<dd>
+<pre><code>$('.selector').datepicker({
+   onChangeMonthYear: function(year, month, inst) { ... }
+});</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="event" id="event-onClose">
+  <div class="event-header">
+    <h3 class="event-name"><a href="http://jqueryui.com/demos/datepicker/#event-onClose">onClose</a></h3>
+    <dl>
+      <dt class="event-type-label"></dt>
+        <dd class="event-type">function(dateText, inst)</dd>
+    </dl>
+  </div>
+  <div class="event-description" style="display: none; ">
+    <p>Allows you to define your own event when the datepicker is closed, whether or not a date is selected. The function receives the selected date as text ("" if none) and the datepicker instance as parameters. <code>this</code> refers to the associated input field.</p>
+  </div>
+  <div class="event-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="event-examples-list">
+    
+<dt>
+  Supply a callback function to handle the <code>onClose</code> event as an init option.
+</dt>
+<dd>
+<pre><code>$('.selector').datepicker({
+   onClose: function(dateText, inst) { ... }
+});</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+
+<li class="event" id="event-onSelect">
+  <div class="event-header">
+    <h3 class="event-name"><a href="http://jqueryui.com/demos/datepicker/#event-onSelect">onSelect</a></h3>
+    <dl>
+      <dt class="event-type-label"></dt>
+        <dd class="event-type">function(dateText, inst)</dd>
+    </dl>
+  </div>
+  <div class="event-description" style="display: none; ">
+    <p>Allows you to define your own event when the datepicker is selected. The function receives the selected date as text and the datepicker instance as parameters. <code>this</code> refers to the associated input field.</p>
+  </div>
+  <div class="event-examples" style="display: none; ">
+    <h4>Code examples</h4>
+    <dl class="event-examples-list">
+    
+<dt>
+  Supply a callback function to handle the <code>onSelect</code> event as an init option.
+</dt>
+<dd>
+<pre><code>$('.selector').datepicker({
+   onSelect: function(dateText, inst) { ... }
+});</code></pre>
+</dd>
+
+    </dl>
+  </div>
+</li>
+
+    </ul>
+  </div>
+  <div id="methods" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide clearfix">
+    <h2 class="top-header">Methods</h2>
+    <div class="toggle-docs-links"><a class="toggle-docs-detail" href="http://jqueryui.com/demos/datepicker/#">Show details</a></div><ul class="methods-list">
+      
+<li class="method" id="method-destroy">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-destroy">destroy</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "destroy"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Remove the datepicker functionality completely. This will return the element back to its pre-init state.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-disable">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-disable">disable</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "disable"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Disable the datepicker.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-enable">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-enable">enable</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "enable"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Enable the datepicker.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-option">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-option">option</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "option"
+
+, optionName
+
+, <span class="optional">[</span>value<span class="optional">] </span>
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Get or set any datepicker option. If no value is specified, will act as a getter.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-option">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-option">option</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "option"
+
+, options
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Set multiple datepicker options at once by providing an options object.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-widget">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-widget">widget</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "widget"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Returns the .ui-datepicker element.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-dialog">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-dialog">dialog</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "dialog"
+
+, date
+
+, <span class="optional">[</span>onSelect<span class="optional">] </span>
+
+, <span class="optional">[</span>settings<span class="optional">] </span>
+
+, <span class="optional">[</span>pos<span class="optional">] </span>)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Open a datepicker in a "dialog" box.
+</p><p>dateText: the initial date for the date picker as either a Date or a string in the current date format.
+</p><p>onSelect: A callback function when a date is selected. The function receives the date text and date picker instance as parameters.
+</p><p>settings: The new settings for the date picker.
+</p><p>pos: The position of the top/left of the dialog as [x, y] or a MouseEvent that contains the coordinates. If not specified the dialog is centered on the screen.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-isDisabled">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-isDisabled">isDisabled</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "isDisabled"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Determine whether a date picker has been disabled.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-hide">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-hide">hide</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "hide"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Close a previously opened date picker.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-show">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-show">show</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "show"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Call up a previously attached date picker. If the datepicker is attached to an input, the input must be visible for the datepicker to be shown.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-refresh">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-refresh">refresh</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "refresh"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Redraw a date picker, after having made some external modifications.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-getDate">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-getDate">getDate</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "getDate"
+
+
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Returns the current date for the datepicker or null if no date has been selected.</p>
+  </div>
+</li>
+
+
+<li class="method" id="method-setDate">
+  <div class="method-header">
+    <h3 class="method-name"><a href="http://jqueryui.com/demos/datepicker/#method-setDate">setDate</a></h3>
+    <dl>
+      <dt class="method-signature-label">Signature:</dt>
+        <dd class="method-signature">.datepicker( "setDate"
+
+, date
+
+
+
+
+
+)</dd>
+    </dl>
+  </div>
+  <div class="method-description" style="display: none; ">
+    <p>Sets the current date for the datepicker. The new date may be a Date object or a string in the current <a href="http://docs.jquery.com/UI/Datepicker#option-dateFormat" title="UI/Datepicker">date format</a> (e.g. '01/26/2009'), a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null to clear the selected date.</p>
+  </div>
+</li>
+
+    </ul>
+  </div>
+  <div id="theming" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide clearfix">
+    <h2 class="top-header">Theming</h2>
+    <p>The jQuery UI Datepicker plugin uses the jQuery UI CSS Framework to style its look and feel, including colors and background textures. We recommend using the ThemeRoller tool to create and download custom themes that are easy to build and maintain.
+</p>
+  <p>If a deeper level of customization is needed, there are widget-specific classes referenced within the jquery.ui.datepicker.css stylesheet that can be modified. These classes are highlighed in bold below.
+</p>
+    
+  <h3>Sample markup with jQuery UI CSS Framework classes</h3>
+  &lt;div id="ui-datepicker-div" class="<strong>ui-datepicker</strong> ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;div class="<strong>ui-datepicker-header</strong> ui-widget-header ui-helper-clearfix ui-corner-all"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="<strong>ui-datepicker-prev</strong> ui-corner-all" title="Prev"&gt;&lt;span class="ui-icon ui-icon-circle-triangle-w"&gt;Prev&lt;/span&gt;&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="<strong>ui-datepicker-next</strong> ui-corner-all" title="Next"&gt;&lt;span class="ui-icon ui-icon-circle-triangle-e"&gt;Next&lt;/span&gt;&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>ui-datepicker-title</strong>"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="<strong>ui-datepicker-month</strong>"&gt;January&lt;/span&gt;&lt;span class="<strong>ui-datepicker-year</strong>"&gt;2009&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;table class="<strong>ui-datepicker-calendar</strong>"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="<strong>ui-datepicker-week-end</strong>"&gt;&lt;span title="Sunday"&gt;Su&lt;/span&gt;&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="<strong>ui-datepicker-week-end ui-datepicker-other-month</strong> "&gt;&nbsp;1&nbsp;&lt;/td&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/table&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;div class="<strong>ui-datepicker-buttonpane</strong> ui-widget-content"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" class="<strong>ui-datepicker-current</strong> ui-state-default ui-priority-secondary ui-corner-all"&gt;Today&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" class="<strong>ui-datepicker-close</strong> ui-state-default ui-priority-primary ui-corner-all"&gt;Done&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+  <p class="theme-note">
+    <strong>
+      Note: This is a sample of markup generated by the datepicker plugin, not markup you should use to create a datepicker. The only markup needed for that is &lt;input type="text" /&gt; or &lt;div&gt;&lt;/div&gt;.
+    </strong>
+  </p>
+
+  </div>
+</div>
+
+<p></p><!-- 
+Pre-expand include size: 97232 bytes
+Post-expand include size: 193557 bytes
+Template argument size: 121057 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key jqdocs_docs:pcache:idhash:3774-1!1!0!!en!2 and timestamp 20120815135653 -->
+
+
+		</td>
+	</tr>
+</tbody></table>
+
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+		</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="bg"></div>
+		<div class="inner">
+			<p>
+				<span class="first">Sponsored by: </span>
+				<a class="block filamentgroup" href="http://www.filamentgroup.com/"><span>Filamentgroup</span></a>
+				<a href="http://appendto.com/" class="block" style="background: url(&#39;/images/icon_appendto.png&#39;); width: 114px; height: 23px; border: 0; margin: 5px 22px 0px 3px;"><span>appendTo</span></a>
+				<a href="http://browserstack.com/" class="block" style="background: url(&#39;/images/icon_browserstack.png&#39;); width: 135px; height: 23px; border: 0; margin: 5px 22px 0px 3px;"><span>BrowserStack</span></a>
+				<span class="first" style="float: right; padding-right: 12px;">© 2012 <a href="http://jquery.org/">jQuery Foundation</a> and the <a href="http://jqueryui.com/about">jQuery UI Team</a>.</span>
+			</p>
+		</div>
+	</div>
+</div>
+<!--[if lte IE 7]></div><![endif]-->
+<script type="text/javascript">
+var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-1076265-1']); _gaq.push(['_trackPageview']); _gaq.push(['_setDomainName', '.jqueryui.com']);
+(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('a').click(function(){
+        this.blur();
+});
+});
+</script>
+
+
+<div style="position: absolute; float: left; font-family: &#39;Trebuchet MS&#39;, Verdana, sans-serif; font-size: 12px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 8px 3px 3px; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; z-index: 999999; width: 144px; display: none; background-position: initial initial; background-repeat: initial initial; ">	<ul style="list-style: none; margin: 0px; padding: 0px; overflow: auto; height: 200px; ">		<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="./template_files/parseTheme.css.php" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_ui_light.png" alt="UI Lightness" title="UI Lightness" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">UI lightness</span>		</a></li>				<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Segoe+UI%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=333333&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=25&borderColorHeader=333333&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=000000&bgTextureContent=05_inset_soft.png&bgImgOpacityContent=25&borderColorContent=666666&fcContent=ffffff&iconColorContent=cccccc&bgColorDefault=555555&bgTextureDefault=02_glass.png&bgImgOpacityDefault=20&borderColorDefault=666666&fcDefault=eeeeee&iconColorDefault=cccccc&bgColorHover=0078a3&bgTextureHover=02_glass.png&bgImgOpacityHover=40&borderColorHover=59b4d4&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=f58400&bgTextureActive=05_inset_soft.png&bgImgOpacityActive=30&borderColorActive=ffaf0f&fcActive=ffffff&iconColorActive=222222&bgColorHighlight=eeeeee&bgTextureHighlight=03_highlight_soft.png&bgImgOpacityHighlight=80&borderColorHighlight=cccccc&fcHighlight=2e7db2&iconColorHighlight=4b8e0b&bgColorError=ffc73d&bgTextureError=02_glass.png&bgImgOpacityError=40&borderColorError=ffb73d&fcError=111111&iconColorError=a83300&bgColorOverlay=5c5c5c&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=50&opacityOverlay=80&bgColorShadow=cccccc&bgTextureShadow=01_flat.png&bgImgOpacityShadow=30&opacityShadow=60&thicknessShadow=7px&offsetTopShadow=-7px&offsetLeftShadow=-7px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_ui_dark.png" alt="UI Darkness" title="UI Darkness" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">UI darkness</span>		</a></li>			<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Verdana,Arial,sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=cccccc&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=75&borderColorHeader=aaaaaa&fcHeader=222222&iconColorHeader=222222&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=02_glass.png&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=02_glass.png&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=02_glass.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_smoothness.png" alt="Smoothness" title="Smoothness" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Smoothness</span>		</a></li>							<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=5px&bgColorHeader=2191c0&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=75&borderColorHeader=4297d7&fcHeader=eaf5f7&iconColorHeader=d8e7f3&bgColorContent=fcfdfd&bgTextureContent=06_inset_hard.png&bgImgOpacityContent=100&borderColorContent=a6c9e2&fcContent=222222&iconColorContent=0078ae&bgColorDefault=0078ae&bgTextureDefault=02_glass.png&bgImgOpacityDefault=45&borderColorDefault=77d5f7&fcDefault=ffffff&iconColorDefault=e0fdff&bgColorHover=79c9ec&bgTextureHover=02_glass.png&bgImgOpacityHover=75&borderColorHover=448dae&fcHover=026890&iconColorHover=056b93&bgColorActive=6eac2c&bgTextureActive=12_gloss_wave.png&bgImgOpacityActive=50&borderColorActive=acdd4a&fcActive=ffffff&iconColorActive=f5e175&bgColorHighlight=f8da4e&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=fcd113&fcHighlight=915608&iconColorHighlight=f7a50d&bgColorError=e14f1c&bgTextureError=12_gloss_wave.png&bgImgOpacityError=45&borderColorError=cd0a0a&fcError=ffffff&iconColorError=fcd113&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=75&opacityOverlay=30&bgColorShadow=999999&bgTextureShadow=01_flat.png&bgImgOpacityShadow=55&opacityShadow=45&thicknessShadow=0px&offsetTopShadow=5px&offsetLeftShadow=5px&cornerRadiusShadow=5px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_start_menu.png" alt="Start" title="Start" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Start</span>		</a></li>				<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Lucida+Grande,+Lucida+Sans,+Arial,+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=5px&bgColorHeader=5c9ccc&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=55&borderColorHeader=4297d7&fcHeader=ffffff&iconColorHeader=d8e7f3&bgColorContent=fcfdfd&bgTextureContent=06_inset_hard.png&bgImgOpacityContent=100&borderColorContent=a6c9e2&fcContent=222222&iconColorContent=469bdd&bgColorDefault=dfeffc&bgTextureDefault=02_glass.png&bgImgOpacityDefault=85&borderColorDefault=c5dbec&fcDefault=2e6e9e&iconColorDefault=6da8d5&bgColorHover=d0e5f5&bgTextureHover=02_glass.png&bgImgOpacityHover=75&borderColorHover=79b7e7&fcHover=1d5987&iconColorHover=217bc0&bgColorActive=f5f8f9&bgTextureActive=06_inset_hard.png&bgImgOpacityActive=100&borderColorActive=79b7e7&fcActive=e17009&iconColorActive=f9bd01&bgColorHighlight=fbec88&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=55&borderColorHighlight=fad42e&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=02_glass.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_windoze.png" alt="Redmond" title="Redmond" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Redmond</span>		</a></li>						<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Segoe+UI%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=8px&bgColorHeader=817865&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=45&borderColorHeader=494437&fcHeader=ffffff&iconColorHeader=fadc7a&bgColorContent=feeebd&bgTextureContent=03_highlight_soft.png&bgImgOpacityContent=100&borderColorContent=8e846b&fcContent=383838&iconColorContent=d19405&bgColorDefault=fece2f&bgTextureDefault=12_gloss_wave.png&bgImgOpacityDefault=60&borderColorDefault=d19405&fcDefault=4c3000&iconColorDefault=3d3d3d&bgColorHover=ffdd57&bgTextureHover=12_gloss_wave.png&bgImgOpacityHover=70&borderColorHover=a45b13&fcHover=381f00&iconColorHover=bd7b00&bgColorActive=ffffff&bgTextureActive=05_inset_soft.png&bgImgOpacityActive=30&borderColorActive=655e4e&fcActive=0074c7&iconColorActive=eb990f&bgColorHighlight=fff9e5&bgTextureHighlight=12_gloss_wave.png&bgImgOpacityHighlight=90&borderColorHighlight=eeb420&fcHighlight=1f1f1f&iconColorHighlight=ed9f26&bgColorError=d34d17&bgTextureError=07_diagonals_medium.png&bgImgOpacityError=20&borderColorError=ffb73d&fcError=ffffff&iconColorError=ffe180&bgColorOverlay=5c5c5c&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=50&opacityOverlay=80&bgColorShadow=cccccc&bgTextureShadow=01_flat.png&bgImgOpacityShadow=30&opacityShadow=60&thicknessShadow=7px&offsetTopShadow=-7px&offsetLeftShadow=-7px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_sunny.png" alt="Sunny" title="Sunny" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Sunny</span>		</a></li>						<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Trebuchet+MS%2C+Helvetica%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=dddddd&bgTextureHeader=02_glass.png&bgImgOpacityHeader=35&borderColorHeader=bbbbbb&fcHeader=444444&iconColorHeader=999999&bgColorContent=c9c9c9&bgTextureContent=05_inset_soft.png&bgImgOpacityContent=50&borderColorContent=aaaaaa&fcContent=333333&iconColorContent=999999&bgColorDefault=eeeeee&bgTextureDefault=02_glass.png&bgImgOpacityDefault=60&borderColorDefault=cccccc&fcDefault=3383bb&iconColorDefault=70b2e1&bgColorHover=f8f8f8&bgTextureHover=02_glass.png&bgImgOpacityHover=100&borderColorHover=bbbbbb&fcHover=599fcf&iconColorHover=3383bb&bgColorActive=999999&bgTextureActive=06_inset_hard.png&bgImgOpacityActive=75&borderColorActive=999999&fcActive=ffffff&iconColorActive=454545&bgColorHighlight=eeeeee&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=55&borderColorHighlight=ffffff&fcHighlight=444444&iconColorHighlight=3383bb&bgColorError=c0402a&bgTextureError=01_flat.png&bgImgOpacityError=55&borderColorError=c0402a&fcError=ffffff&iconColorError=fbc856&bgColorOverlay=eeeeee&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=80&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=4px&offsetTopShadow=-4px&offsetLeftShadow=-4px&cornerRadiusShadow=0px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_overcast.png" alt="Overcast" title="Overcast" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Overcast</span>				</a></li>						<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Lucida+Grande%2C+Lucida+Sans%2C+Arial%2C+sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=10px&bgColorHeader=3a8104&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=33&borderColorHeader=3f7506&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=285c00&bgTextureContent=05_inset_soft.png&bgImgOpacityContent=10&borderColorContent=72b42d&fcContent=ffffff&iconColorContent=72b42d&bgColorDefault=4ca20b&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=60&borderColorDefault=45930b&fcDefault=ffffff&iconColorDefault=ffffff&bgColorHover=4eb305&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=50&borderColorHover=8bd83b&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=285c00&bgTextureActive=04_highlight_hard.png&bgImgOpacityActive=30&borderColorActive=72b42d&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=fbf5d0&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=f9dd34&fcHighlight=363636&iconColorHighlight=4eb305&bgColorError=ffdc2e&bgTextureError=08_diagonals_thick.png&bgImgOpacityError=95&borderColorError=fad000&fcError=2b2b2b&iconColorError=cd0a0a&bgColorOverlay=444444&bgTextureOverlay=08_diagonals_thick.png&bgImgOpacityOverlay=15&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=07_diagonals_small.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=0px&offsetTopShadow=4px&offsetLeftShadow=4px&cornerRadiusShadow=4px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_le_frog.png" alt="Le Frog" title="Le Frog" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Le Frog</span>		</a></li>								<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Helvetica%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=2px&bgColorHeader=dddddd&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=50&borderColorHeader=dddddd&fcHeader=444444&iconColorHeader=0073ea&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=dddddd&fcContent=444444&iconColorContent=ff0084&bgColorDefault=f6f6f6&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=100&borderColorDefault=dddddd&fcDefault=0073ea&iconColorDefault=666666&bgColorHover=0073ea&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=25&borderColorHover=0073ea&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=dddddd&fcActive=ff0084&iconColorActive=454545&bgColorHighlight=ffffff&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=55&borderColorHighlight=cccccc&fcHighlight=444444&iconColorHighlight=0073ea&bgColorError=ffffff&bgTextureError=01_flat.png&bgImgOpacityError=55&borderColorError=ff0084&fcError=222222&iconColorError=ff0084&bgColorOverlay=eeeeee&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=80&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=4px&offsetTopShadow=-4px&offsetLeftShadow=-4px&cornerRadiusShadow=0px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_flick.png" alt="Flick" title="Flick" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Flick</span>				</a></li>				<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Trebuchet+MS%2C+Tahoma%2C+Verdana%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=ffffff&bgTextureHeader=23_fine_grain.png&bgImgOpacityHeader=15&borderColorHeader=d4d1bf&fcHeader=453821&iconColorHeader=b83400&bgColorContent=eceadf&bgTextureContent=23_fine_grain.png&bgImgOpacityContent=10&borderColorContent=d9d6c4&fcContent=1f1f1f&iconColorContent=222222&bgColorDefault=f8f7f6&bgTextureDefault=23_fine_grain.png&bgImgOpacityDefault=10&borderColorDefault=cbc7bd&fcDefault=654b24&iconColorDefault=b83400&bgColorHover=654b24&bgTextureHover=23_fine_grain.png&bgImgOpacityHover=65&borderColorHover=654b24&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=eceadf&bgTextureActive=23_fine_grain.png&bgImgOpacityActive=15&borderColorActive=d9d6c4&fcActive=140f06&iconColorActive=8c291d&bgColorHighlight=f7f3de&bgTextureHighlight=23_fine_grain.png&bgImgOpacityHighlight=15&borderColorHighlight=b2a266&fcHighlight=3a3427&iconColorHighlight=3572ac&bgColorError=b83400&bgTextureError=23_fine_grain.png&bgImgOpacityError=68&borderColorError=681818&fcError=ffffff&iconColorError=fbdb93&bgColorOverlay=6e4f1c&bgTextureOverlay=16_diagonal_maze.png&bgImgOpacityOverlay=20&opacityOverlay=60&bgColorShadow=000000&bgTextureShadow=16_diagonal_maze.png&bgImgOpacityShadow=40&opacityShadow=60&thicknessShadow=5px&offsetTopShadow=0&offsetLeftShadow=-10px&cornerRadiusShadow=18px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_pepper_grinder.png" alt="Pepper Grinder" title="Pepper Grinder" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Pepper Grinder</span>				</a></li>								<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Lucida+Grande%2C+Lucida+Sans%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=30273a&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=25&borderColorHeader=231d2b&fcHeader=ffffff&iconColorHeader=a8a3ae&bgColorContent=3d3644&bgTextureContent=12_gloss_wave.png&bgImgOpacityContent=30&borderColorContent=7e7783&fcContent=ffffff&iconColorContent=ffffff&bgColorDefault=dcd9de&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=100&borderColorDefault=dcd9de&fcDefault=665874&iconColorDefault=8d78a5&bgColorHover=eae6ea&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=100&borderColorHover=d1c5d8&fcHover=734d99&iconColorHover=734d99&bgColorActive=5f5964&bgTextureActive=03_highlight_soft.png&bgImgOpacityActive=45&borderColorActive=7e7783&fcActive=ffffff&iconColorActive=454545&bgColorHighlight=fafafa&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=55&borderColorHighlight=ffdb1f&fcHighlight=333333&iconColorHighlight=8d78a5&bgColorError=994d53&bgTextureError=01_flat.png&bgImgOpacityError=55&borderColorError=994d53&fcError=ffffff&iconColorError=ebccce&bgColorOverlay=eeeeee&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=80&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=60&thicknessShadow=4px&offsetTopShadow=-4px&offsetLeftShadow=-4px&cornerRadiusShadow=0px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_eggplant.png" alt="Eggplant" title="Eggplant" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Eggplant</span>				</a></li>								<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Verdana%2C+Arial%2C+sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=444444&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=44&borderColorHeader=333333&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=000000&bgTextureContent=14_loop.png&bgImgOpacityContent=25&borderColorContent=555555&fcContent=ffffff&iconColorContent=cccccc&bgColorDefault=222222&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=35&borderColorDefault=444444&fcDefault=eeeeee&iconColorDefault=cccccc&bgColorHover=003147&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=33&borderColorHover=0b93d5&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=0972a5&bgTextureActive=04_highlight_hard.png&bgImgOpacityActive=20&borderColorActive=26b3f7&fcActive=ffffff&iconColorActive=222222&bgColorHighlight=eeeeee&bgTextureHighlight=03_highlight_soft.png&bgImgOpacityHighlight=80&borderColorHighlight=cccccc&fcHighlight=2e7db2&iconColorHighlight=4b8e0b&bgColorError=ffc73d&bgTextureError=02_glass.png&bgImgOpacityError=40&borderColorError=ffb73d&fcError=111111&iconColorError=a83300&bgColorOverlay=5c5c5c&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=50&opacityOverlay=80&bgColorShadow=cccccc&bgTextureShadow=01_flat.png&bgImgOpacityShadow=30&opacityShadow=60&thicknessShadow=7px&offsetTopShadow=-7px&offsetLeftShadow=-7px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_dark_hive.png" alt="Dark Hive" title="Dark Hive" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Dark Hive</span>		</a></li>										<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Lucida+Grande%2C+Lucida+Sans%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=deedf7&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=100&borderColorHeader=aed0ea&fcHeader=222222&iconColorHeader=72a7cf&bgColorContent=f2f5f7&bgTextureContent=04_highlight_hard.png&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=362b36&iconColorContent=72a7cf&bgColorDefault=d7ebf9&bgTextureDefault=02_glass.png&bgImgOpacityDefault=80&borderColorDefault=aed0ea&fcDefault=2779aa&iconColorDefault=3d80b3&bgColorHover=e4f1fb&bgTextureHover=02_glass.png&bgImgOpacityHover=100&borderColorHover=74b2e2&fcHover=0070a3&iconColorHover=2694e8&bgColorActive=3baae3&bgTextureActive=02_glass.png&bgImgOpacityActive=50&borderColorActive=2694e8&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=ffef8f&bgTextureHighlight=03_highlight_soft.png&bgImgOpacityHighlight=25&borderColorHighlight=f9dd34&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=cd0a0a&bgTextureError=01_flat.png&bgImgOpacityError=15&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffffff&bgColorOverlay=eeeeee&bgTextureOverlay=08_diagonals_thick.png&bgImgOpacityOverlay=90&opacityOverlay=80&bgColorShadow=000000&bgTextureShadow=04_highlight_hard.png&bgImgOpacityShadow=70&opacityShadow=30&thicknessShadow=7px&offsetTopShadow=-7px&offsetLeftShadow=-7px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_cupertino.png" alt="Cupertino" title="Cupertino" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Cupertino</span>				</a></li>				<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=segoe+ui%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=ece8da&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=100&borderColorHeader=d4ccb0&fcHeader=433f38&iconColorHeader=847e71&bgColorContent=f5f3e5&bgTextureContent=04_highlight_hard.png&bgImgOpacityContent=100&borderColorContent=dfd9c3&fcContent=312e25&iconColorContent=808080&bgColorDefault=459e00&bgTextureDefault=04_highlight_hard.png&bgImgOpacityDefault=15&borderColorDefault=327E04&fcDefault=ffffff&iconColorDefault=eeeeee&bgColorHover=67b021&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=25&borderColorHover=327E04&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=fafaf4&bgTextureActive=04_highlight_hard.png&bgImgOpacityActive=100&borderColorActive=d4ccb0&fcActive=459e00&iconColorActive=8DC262&bgColorHighlight=fcf0ba&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=e8e1b5&fcHighlight=363636&iconColorHighlight=8DC262&bgColorError=ffedad&bgTextureError=03_highlight_soft.png&bgImgOpacityError=95&borderColorError=e3a345&fcError=cd5c0a&iconColorError=cd0a0a&bgColorOverlay=2b2922&bgTextureOverlay=05_inset_soft.png&bgImgOpacityOverlay=15&opacityOverlay=90&bgColorShadow=cccccc&bgTextureShadow=04_highlight_hard.png&bgImgOpacityShadow=95&opacityShadow=20&thicknessShadow=12px&offsetTopShadow=-12px&offsetLeftShadow=-12px&cornerRadiusShadow=10px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_south_street.png" alt="South St" title="South St" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">South Street</span>				</a></li>		<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Arial,sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=cc0000&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=15&borderColorHeader=e3a1a1&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=eeeeee&fcContent=333333&iconColorContent=cc0000&bgColorDefault=eeeeee&bgTextureDefault=04_highlight_hard.png&bgImgOpacityDefault=100&borderColorDefault=d8dcdf&fcDefault=004276&iconColorDefault=cc0000&bgColorHover=f6f6f6&bgTextureHover=04_highlight_hard.png&bgImgOpacityHover=100&borderColorHover=cdd5da&fcHover=111111&iconColorHover=cc0000&bgColorActive=ffffff&bgTextureActive=01_flat.png&bgImgOpacityActive=65&borderColorActive=eeeeee&fcActive=cc0000&iconColorActive=cc0000&bgColorHighlight=fbf8ee&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=fcd3a1&fcHighlight=444444&iconColorHighlight=004276&bgColorError=f3d8d8&bgTextureError=08_diagonals_thick.png&bgImgOpacityError=75&borderColorError=cc0000&fcError=2e2e2e&iconColorError=cc0000&bgColorOverlay=a6a6a6&bgTextureOverlay=09_dots_small.png&bgImgOpacityOverlay=65&opacityOverlay=40&bgColorShadow=333333&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=10&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_blitzer.png" alt="Blitzer" title="Blitzer" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Blitzer</span>		</a></li>			<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?tr=ffDefault=Helvetica,Arial,sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=cb842e&bgTextureHeader=02_glass.png&bgImgOpacityHeader=25&borderColorHeader=d49768&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=f4f0ec&bgTextureContent=05_inset_soft.png&bgImgOpacityContent=100&borderColorContent=e0cfc2&fcContent=1e1b1d&iconColorContent=c47a23&bgColorDefault=ede4d4&bgTextureDefault=02_glass.png&bgImgOpacityDefault=70&borderColorDefault=cdc3b7&fcDefault=3f3731&iconColorDefault=f08000&bgColorHover=f5f0e5&bgTextureHover=02_glass.png&bgImgOpacityHover=100&borderColorHover=f5ad66&fcHover=a46313&iconColorHover=f08000&bgColorActive=f4f0ec&bgTextureActive=04_highlight_hard.png&bgImgOpacityActive=100&borderColorActive=e0cfc2&fcActive=b85700&iconColorActive=f35f07&bgColorHighlight=f5f5b5&bgTextureHighlight=04_highlight_hard.png&bgImgOpacityHighlight=75&borderColorHighlight=d9bb73&fcHighlight=060200&iconColorHighlight=cb672b&bgColorError=fee4bd&bgTextureError=04_highlight_hard.png&bgImgOpacityError=65&borderColorError=f8893f&fcError=592003&iconColorError=ff7519&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=75&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=75&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_humanity.png" alt="Humanity" title="Humanity" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Humanity</span>		</a></li>			<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Gill+Sans,Arial,sans-serif&fwDefault=bold&fsDefault=1.2em&cornerRadius=4px&bgColorHeader=35414f&bgTextureHeader=09_dots_small.png&bgImgOpacityHeader=35&borderColorHeader=2c4359&fcHeader=e1e463&iconColorHeader=e1e463&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=2c4359&iconColorContent=c02669&bgColorDefault=93c3cd&bgTextureDefault=07_diagonals_small.png&bgImgOpacityDefault=50&borderColorDefault=93c3cd&fcDefault=333333&iconColorDefault=ffffff&bgColorHover=ccd232&bgTextureHover=07_diagonals_small.png&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=db4865&bgTextureActive=07_diagonals_small.png&bgImgOpacityActive=40&borderColorActive=ff6b7f&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=ffff38&bgTextureHighlight=10_dots_medium.png&bgImgOpacityHighlight=80&borderColorHighlight=b4d100&fcHighlight=363636&iconColorHighlight=88a206&bgColorError=ff3853&bgTextureError=07_diagonals_small.png&bgImgOpacityError=50&borderColorError=ff6b7f&fcError=ffffff&iconColorError=ffeb33&bgColorOverlay=f7f7ba&bgTextureOverlay=11_white_lines.png&bgImgOpacityOverlay=85&opacityOverlay=80&bgColorShadow=ba9217&bgTextureShadow=01_flat.png&bgImgOpacityShadow=75&opacityShadow=20&thicknessShadow=10px&offsetTopShadow=8px&offsetLeftShadow=8px&cornerRadiusShadow=5px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">		<img src="./template_files/theme_90_hot_sneaks.png" alt="Hot Sneaks" title="Hot Sneaks" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Hot sneaks</span>		</a></li>			<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=segoe+ui,+Arial,+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=3px&bgColorHeader=f9f9f9&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=100&borderColorHeader=cccccc&fcHeader=e69700&iconColorHeader=5fa5e3&bgColorContent=eeeeee&bgTextureContent=06_inset_hard.png&bgImgOpacityContent=100&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=0a82eb&bgColorDefault=1484e6&bgTextureDefault=08_diagonals_thick.png&bgImgOpacityDefault=22&borderColorDefault=ffffff&fcDefault=ffffff&iconColorDefault=fcdd4a&bgColorHover=2293f7&bgTextureHover=08_diagonals_thick.png&bgImgOpacityHover=26&borderColorHover=2293f7&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=e69700&bgTextureActive=08_diagonals_thick.png&bgImgOpacityActive=20&borderColorActive=e69700&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=c5ddfc&bgTextureHighlight=07_diagonals_small.png&bgImgOpacityHighlight=25&borderColorHighlight=ffffff&fcHighlight=333333&iconColorHighlight=0b54d5&bgColorError=e69700&bgTextureError=08_diagonals_thick.png&bgImgOpacityError=20&borderColorError=e69700&fcError=ffffff&iconColorError=ffffff&bgColorOverlay=e6b900&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=e69700&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=20&thicknessShadow=0px&offsetTopShadow=6px&offsetLeftShadow=6px&cornerRadiusShadow=3px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_excite_bike.png" alt="Excite Bike" title="Excite Bike" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Excite Bike</span>			</a></li>		<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?tr&ffDefault=Helvetica,+Arial,+sans-serif&fwDefault=normal&fsDefault=1.1&fsDefaultUnit=em&cornerRadius=5&cornerRadiusUnit=px&bgColorHeader=888888&bgTextureHeader=04_highlight_hard.png&bgImgOpacityHeader=15&borderColorHeader=404040&fcHeader=ffffff&iconColorHeader=cccccc&bgColorContent=121212&bgTextureContent=12_gloss_wave.png&bgImgOpacityContent=16&borderColorContent=404040&fcContent=eeeeee&iconColorContent=bbbbbb&bgColorDefault=adadad&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=35&borderColorDefault=cccccc&fcDefault=333333&iconColorDefault=666666&bgColorHover=dddddd&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=60&borderColorHover=dddddd&fcHover=000000&iconColorHover=c98000&bgColorActive=121212&bgTextureActive=05_inset_soft.png&bgImgOpacityActive=15&borderColorActive=000000&fcActive=ffffff&iconColorActive=f29a00&bgColorHighlight=555555&bgTextureHighlight=04_highlight_hard.png&bgImgOpacityHighlight=55&borderColorHighlight=404040&fcHighlight=cccccc&iconColorHighlight=aaaaaa&bgColorError=fef1ec&bgTextureError=02_glass.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_black_matte.png" alt="Vader" title="Vader" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Vader</span>			</a></li>				<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Arial,+sans-serif&fwDefault=bold&fsDefault=1.3em&cornerRadius=4px&bgColorHeader=0b3e6f&bgTextureHeader=08_diagonals_thick.png&bgImgOpacityHeader=15&borderColorHeader=0b3e6f&fcHeader=f6f6f6&iconColorHeader=98d2fb&bgColorContent=111111&bgTextureContent=12_gloss_wave.png&bgImgOpacityContent=20&borderColorContent=000000&fcContent=d9d9d9&iconColorContent=9ccdfc&bgColorDefault=333333&bgTextureDefault=09_dots_small.png&bgImgOpacityDefault=20&borderColorDefault=333333&fcDefault=ffffff&iconColorDefault=9ccdfc&bgColorHover=00498f&bgTextureHover=09_dots_small.png&bgImgOpacityHover=40&borderColorHover=222222&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=292929&bgTextureActive=01_flat.png&bgImgOpacityActive=40&borderColorActive=096ac8&fcActive=75abff&iconColorActive=00498f&bgColorHighlight=0b58a2&bgTextureHighlight=10_dots_medium.png&bgImgOpacityHighlight=30&borderColorHighlight=052f57&fcHighlight=ffffff&iconColorHighlight=ffffff&bgColorError=a32d00&bgTextureError=09_dots_small.png&bgImgOpacityError=30&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffffff&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_dot_luv.png" alt="Dot Luv" title="Dot Luv" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Dot Luv</span>			</a></li>			<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Segoe+UI%2C+Helvetica%2C+Arial%2C+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=453326&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=25&borderColorHeader=695649&fcHeader=e3ddc9&iconColorHeader=e3ddc9&bgColorContent=201913&bgTextureContent=05_inset_soft.png&bgImgOpacityContent=10&borderColorContent=9c947c&fcContent=ffffff&iconColorContent=222222&bgColorDefault=1c160d&bgTextureDefault=12_gloss_wave.png&bgImgOpacityDefault=20&borderColorDefault=695444&fcDefault=9bcc60&iconColorDefault=9bcc60&bgColorHover=44372c&bgTextureHover=12_gloss_wave.png&bgImgOpacityHover=30&borderColorHover=9c947c&fcHover=baec7e&iconColorHover=add978&bgColorActive=201913&bgTextureActive=03_highlight_soft.png&bgImgOpacityActive=20&borderColorActive=9c947c&fcActive=e3ddc9&iconColorActive=e3ddc9&bgColorHighlight=619226&bgTextureHighlight=03_highlight_soft.png&bgImgOpacityHighlight=20&borderColorHighlight=add978&fcHighlight=ffffff&iconColorHighlight=ffffff&bgColorError=5f391b&bgTextureError=02_glass.png&bgImgOpacityError=15&borderColorError=5f391b&fcError=ffffff&iconColorError=f1fd86&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_mint_choco.png" alt="Mint Choc" title="Mint Choc" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Mint Choc</span>		</a></li>		<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Verdana,+Arial,+sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=333333&bgTextureHeader=08_diagonals_thick.png&bgImgOpacityHeader=8&borderColorHeader=a3a3a3&fcHeader=eeeeee&iconColorHeader=bbbbbb&bgColorContent=f9f9f9&bgTextureContent=04_highlight_hard.png&bgImgOpacityContent=100&borderColorContent=cccccc&fcContent=222222&iconColorContent=222222&bgColorDefault=111111&bgTextureDefault=02_glass.png&bgImgOpacityDefault=40&borderColorDefault=777777&fcDefault=e3e3e3&iconColorDefault=ededed&bgColorHover=1c1c1c&bgTextureHover=02_glass.png&bgImgOpacityHover=55&borderColorHover=000000&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=ffffff&bgTextureActive=01_flat.png&bgImgOpacityActive=65&borderColorActive=cccccc&fcActive=222222&iconColorActive=222222&bgColorHighlight=ffeb80&bgTextureHighlight=06_inset_hard.png&bgImgOpacityHighlight=55&borderColorHighlight=ffde2e&fcHighlight=363636&iconColorHighlight=4ca300&bgColorError=cd0a0a&bgTextureError=06_inset_hard.png&bgImgOpacityError=45&borderColorError=9e0505&fcError=ffffff&iconColorError=ffcf29&bgColorOverlay=aaaaaa&bgTextureOverlay=04_highlight_hard.png&bgImgOpacityOverlay=40&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=03_highlight_soft.png&bgImgOpacityShadow=50&opacityShadow=20&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_black_tie.png" alt="Black Tie" title="Black Tie" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Black Tie</span>		</a></li>		<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Segoe+UI,+Helvetica,+Arial,+sans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=9fda58&bgTextureHeader=12_gloss_wave.png&bgImgOpacityHeader=85&borderColorHeader=000000&fcHeader=222222&iconColorHeader=1f1f1f&bgColorContent=000000&bgTextureContent=12_gloss_wave.png&bgImgOpacityContent=55&borderColorContent=4a4a4a&fcContent=ffffff&iconColorContent=9fda58&bgColorDefault=0a0a0a&bgTextureDefault=02_glass.png&bgImgOpacityDefault=40&borderColorDefault=1b1613&fcDefault=b8ec79&iconColorDefault=b8ec79&bgColorHover=000000&bgTextureHover=02_glass.png&bgImgOpacityHover=60&borderColorHover=000000&fcHover=96f226&iconColorHover=b8ec79&bgColorActive=4c4c4c&bgTextureActive=01_flat.png&bgImgOpacityActive=0&borderColorActive=696969&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=f1fbe5&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=8cce3b&fcHighlight=030303&iconColorHighlight=000000&bgColorError=f6ecd5&bgTextureError=12_gloss_wave.png&bgImgOpacityError=95&borderColorError=f1ac88&fcError=74736d&iconColorError=cd0a0a&bgColorOverlay=262626&bgTextureOverlay=07_diagonals_small.png&bgImgOpacityOverlay=50&opacityOverlay=30&bgColorShadow=303030&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=50&thicknessShadow=6px&offsetTopShadow=-6px&offsetLeftShadow=-6px&cornerRadiusShadow=12px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_trontastic.png" alt="Trontastic" title="Trontastic" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Trontastic</span>			</a></li>			<li style="width: 120px; padding: 2px; margin: 1px; border: 1px solid rgb(17, 17, 17); clear: left; float: left; "><a href="http://jqueryui.com/themeroller/css/parseTheme.css.php?ffDefault=Georgia%2C+Verdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.2em&cornerRadius=5px&bgColorHeader=261803&bgTextureHeader=13_diamond.png&bgImgOpacityHeader=8&borderColorHeader=baaa5a&fcHeader=eacd86&iconColorHeader=e9cd86&bgColorContent=443113&bgTextureContent=13_diamond.png&bgImgOpacityContent=8&borderColorContent=efec9f&fcContent=efec9f&iconColorContent=efec9f&bgColorDefault=4f4221&bgTextureDefault=13_diamond.png&bgImgOpacityDefault=10&borderColorDefault=362917&fcDefault=f8eec9&iconColorDefault=e8e2b5&bgColorHover=675423&bgTextureHover=13_diamond.png&bgImgOpacityHover=25&borderColorHover=362917&fcHover=f8eec9&iconColorHover=f2ec64&bgColorActive=443113&bgTextureActive=13_diamond.png&bgImgOpacityActive=8&borderColorActive=efec9f&fcActive=f9f2bd&iconColorActive=f9f2bd&bgColorHighlight=d5ac5d&bgTextureHighlight=13_diamond.png&bgImgOpacityHighlight=25&borderColorHighlight=362917&fcHighlight=060200&iconColorHighlight=070603&bgColorError=fee4bd&bgTextureError=04_highlight_hard.png&bgImgOpacityError=65&borderColorError=c26629&fcError=803f1e&iconColorError=ff7519&bgColorOverlay=372806&bgTextureOverlay=13_diamond.png&bgImgOpacityOverlay=20&opacityOverlay=80&bgColorShadow=ddd4b0&bgTextureShadow=01_flat.png&bgImgOpacityShadow=75&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=12px" style="color: rgb(170, 170, 170); text-decoration: none; float: left; width: 100%; outline: 0px; ">			<img src="./template_files/theme_90_swanky_purse.png" alt="Swanky Purse" title="Swanky Purse" style="float: left; border: 1px solid rgb(51, 51, 51); margin: 0px 2px; ">			<span class="themeName" style="float: left; margin: 3px 0px; ">Swanky Purse</span>			</a></li>	</ul></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 274px; left: 442px; z-index: 1; display: none; "><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">August</span>&nbsp;<span class="ui-datepicker-year">2012</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">3</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">4</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">10</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">11</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">17</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">18</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">24</a></td><td class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default ui-state-highlight" href="http://jqueryui.com/demos/datepicker/#">25</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="7" data-year="2012"><a class="ui-state-default" href="http://jqueryui.com/demos/datepicker/#">31</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div style="display:none" id="addthis-extension-script"></div><div id="window-resizer-tooltip"><a href="http://jqueryui.com/demos/datepicker/#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png); "></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>

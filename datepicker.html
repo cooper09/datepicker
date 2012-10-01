@@ -22,7 +22,11 @@
 			function callTheJsonp()
 			{
 				// the url of the script where we send the asynchronous call
-				var url = "http://sonyainc.net/php/jsonp_test.php?callback=parseRequest";
+			//	var url = "http://sonyainc.net/php/jsonp_test.php?callback=parseRequest";
+				
+		var selected = document.sendForm.date.value;
+		
+				var url = "http://sonyainc.net/php/callback4.php?date="+selected+"&callback=parseRequest";
 				// create a new script element
 				var script = document.createElement('script');
 				// set the src attribute to that url
@@ -35,7 +39,7 @@
 			// you can make it general so it would parse all the responses the page receives based on a response field
 			function parseRequest(response)
 			{
-				alert("Response: " + response );
+				alert("Response: " + response.found );
 				
 				try // try to output this to the javascript console
 				{
@@ -56,7 +60,7 @@ $(function() {
 	
 	var value = $('#datepicker').datepicker( "getDate" )
 	
-	alert("proper value: " + t );
+	//alert("proper value: " + value );
 	document.sendForm.date.value = t;
 	});
 	
@@ -71,11 +75,8 @@ $(function() {
 TEST
 <div class="demo">
 
-<form action="http://sonyainc.net/php/check_date.php" method="post" id-"send" name="sendForm" />
+<form action="" method="post" id-"send" name="sendForm" />
 Date: <input type="date" name="date" value=''/>
-Lastname: <input type="text" name="lastname" />
-Age: <input type="text" name="age" />
-<input type="submit" />
 </form>
 
 <span class="callJson" onclick="JavaScript:callTheJsonp()">click here to make the jsonp call</span>
